@@ -34,7 +34,7 @@ int distance(point a, point b) {
 point carpos;
 
 bool sortFunc(Ride x, Ride y) {
-	return x.startTime < y.startTime;
+	return x.startTime +x.endTime  + y.distance < y.startTime + y.endTime + x.distance;
 }
 
 int main() {
